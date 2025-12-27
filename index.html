@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle Financeiro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<main class="container">
+    <h1>Controle Financeiro Pessoal</h1>
+
+    <section class="summary">
+        <div class="card income">
+            <h3>Entradas</h3>
+            <p id="total-income">R$ 0,00</p>
+        </div>
+        <div class="card expense">
+            <h3>Saídas</h3>
+            <p id="total-expense">R$ 0,00</p>
+        </div>
+        <div class="card balance">
+            <h3>Saldo</h3>
+            <p id="balance">R$ 0,00</p>
+        </div>
+    </section>
+
+    <form id="transaction-form">
+        <input type="text" id="description" placeholder="Descrição" required>
+
+        <input type="number" id="amount" placeholder="Valor" step="0.01" required>
+
+        <select id="type">
+            <option value="entrada">Entrada</option>
+            <option value="saida">Saída</option>
+        </select>
+
+        <select id="category">
+            <option value="Salário">Salário</option>
+            <option value="Alimentação">Alimentação</option>
+            <option value="Moradia">Moradia</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Lazer">Lazer</option>
+            <option value="Outros">Outros</option>
+        </select>
+
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <section class="filters">
+        <select id="filter-type">
+            <option value="todos">Todos</option>
+            <option value="entrada">Entradas</option>
+            <option value="saida">Saídas</option>
+        </select>
+    </section>
+
+    <ul id="transaction-list"></ul>
+</main>
+
+<script src="./script.js"></script>
+</body>
+</html>
